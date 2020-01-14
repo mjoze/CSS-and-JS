@@ -1,3 +1,4 @@
 # CSS
-## BEM
+### BEM — Block Element Modifier
+
 # JavaScript
