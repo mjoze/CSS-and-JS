@@ -1,3 +1,3 @@
-#CSS
+# CSS
 ## BEM
-#JavaScript
+# JavaScript
