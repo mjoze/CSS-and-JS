@@ -1,0 +1,32 @@
+.menu {
+  border: 3px solid black;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__item {
+  background-color: #999;
+}
+
+.articles {
+  border: 5px solid green;
+  height: 300px;
+  background-color: gray;
+  line-height: 50px;
+  text-align: center;
+}
+
+.articles__item {
+  border: 2px dotted red;
+  height: 50px;
+  margin: 5px;
+}
+/*# sourceMappingURL=style.min.css.map */
