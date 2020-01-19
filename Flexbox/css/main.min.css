@@ -1,7 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap&subset=latin-ext");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: #8daae5;
+  font-family: arial, sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 2rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0 4px 0 #000;
+          box-shadow: 0 0 4px 0 #000;
 }
 /*# sourceMappingURL=main.min.css.map */
