@@ -164,6 +164,10 @@ html {
   text-align: center;
 }
 
+.article--small {
+  padding: 20px 30px;
+}
+
 .article__image {
   display: block;
   width: 100%;
@@ -174,6 +178,12 @@ html {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 35px 0 15px;
+}
+
+.article--small .article__title {
+  padding: 25px 10px;
+  font-size: 1.8rem;
+  background-color: #fff;
 }
 
 .article__introduction {
@@ -232,7 +242,19 @@ html {
 .article-list {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background-color: #b68324;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #05022c;
+}
+
+.article-list__article {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 .footer {
