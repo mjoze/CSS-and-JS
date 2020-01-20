@@ -14,7 +14,7 @@ $special-font: 'pt sans',
 
 html {
     font-size: 10px;
-    background-color: $main-color;
+    // background-color: $main-color;
     font-family: $default-font;
     color: white;
 }
@@ -102,7 +102,45 @@ html {
 
 .menu {
     flex-basis: 100%;
-    background-color: darkblue;
+    height: 70px;
+    background-color: rgb(5, 2, 44);
+    font-family: $special-font;
+    padding: 15px 50px 15px 80px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 0 20px;
+        font-size: 3rem;
+        text-transform: uppercase;
+        line-height: 4rem;
+
+        &:hover {
+            border-bottom: 2px yellow solid;
+        }
+
+        &:nth-last-child(1) {
+            margin-left: auto;
+            border: 2px solid #666;
+
+            &:hover {
+                border-color: yellow;
+            }
+
+            .menu__link {
+                padding: 0 22px;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .main-articles {
