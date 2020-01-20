@@ -235,6 +235,36 @@ html {
 }
 
 .footer {
-    background-color: rgb(75, 67, 192);
     flex-basis: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    color: black;
+
+
+    .sm-links {
+        flex-basis: 30%
+    }
+}
+
+.sm-links {
+    font-family: $special-font;
+    padding: 20px;
+
+    &--darken {
+        background-color: lighten($main-color, 35%);
+    }
+
+    &__title {
+        margin: 20px 0 20px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    &__item {
+        text-indent: 40px;
+        font-size: 1.2rem;
+        margin: 0 5px 20px 5px;
+    }
 }

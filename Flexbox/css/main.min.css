@@ -258,8 +258,42 @@ html {
 }
 
 .footer {
-  background-color: #4b43c0;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 0;
+  color: black;
+}
+
+.footer .sm-links {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.sm-links {
+  font-family: "pt sans", "roboto";
+  padding: 20px;
+}
+
+.sm-links--darken {
+  background-color: #e0dfde;
+}
+
+.sm-links__title {
+  margin: 20px 0 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.sm-links__item {
+  text-indent: 40px;
+  font-size: 1.2rem;
+  margin: 0 5px 20px 5px;
 }
 /*# sourceMappingURL=main.min.css.map */
