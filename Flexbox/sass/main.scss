@@ -53,6 +53,7 @@ html {
     &__input {
         flex-basis: 60%;
         height: 20%;
+        max-height: 60px;
         margin-right: 2vh;
         padding: 0 10px;
         font-size: 1.4rem;
@@ -65,6 +66,7 @@ html {
 
     &__btn {
         height: 20%;
+        max-height: 60px;
         font-size: 1.4rem;
         padding: 0 10px;
         border: 2px solid black;
@@ -83,8 +85,19 @@ html {
 }
 
 .settings {
-    background-color: rgb(133, 55, 55);
-    padding: 0 50px;
+    display: flex;
+    padding: 0 30px 0 50px;
+    align-items: center;
+
+    &__icon-link {
+        margin: 0 10px;
+        font-size: 3rem;
+        color: #666;
+
+        &:hover {
+            color: black;
+        }
+    }
 }
 
 .menu {
