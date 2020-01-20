@@ -38,9 +38,12 @@ html {
 .logo {
     flex-basis: 200px;
 
+
     &__image {
         // display: block;
         width: 100%;
+
+
     }
 }
 
@@ -50,10 +53,16 @@ html {
     align-items: center;
     justify-content: center;
 
+    @media(max-width:799px) {
+        flex-basis: 100%;
+        order: -1;
+    }
+
     &__input {
         flex-basis: 60%;
         height: 20%;
         max-height: 60px;
+        min-height: 50px;
         margin-right: 2vh;
         padding: 0 10px;
         font-size: 1.4rem;
@@ -67,6 +76,7 @@ html {
     &__btn {
         height: 20%;
         max-height: 60px;
+        min-height: 50px;
         font-size: 1.4rem;
         padding: 0 10px;
         border: 2px solid black;
@@ -89,6 +99,11 @@ html {
     padding: 0 30px 0 50px;
     align-items: center;
 
+    @media(max-width:799px) {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
     &__icon-link {
         margin: 0 10px;
         font-size: 3rem;
@@ -107,9 +122,12 @@ html {
     font-family: $special-font;
     padding: 15px 50px 15px 80px;
 
+
+
     &__list {
         display: flex;
         list-style: none;
+
     }
 
     &__item {
@@ -218,6 +236,10 @@ html {
 
     .article {
         flex-basis: 50%;
+
+        @media (max-width:799px) {
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -230,7 +252,15 @@ html {
 
     &__article {
         flex-basis: 30%;
+
         // flex-grow: 1;
+        @media (max-width:1023px) {
+            flex-basis: 45%;
+        }
+
+        @media (max-width:799px) {
+            flex-basis: 95%;
+        }
     }
 }
 
