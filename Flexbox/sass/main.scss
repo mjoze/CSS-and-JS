@@ -16,17 +16,59 @@ html {
     font-size: 10px;
     background-color: $main-color;
     font-family: $default-font;
+    color: white;
 }
 
 .wrapper {
     // kontener
     display: flex;
     flex-wrap: wrap;
-    //pozycja
+    flex-direction: row;
+    align-content: flex-start;
+    //pozycja i wielkosc
     margin: 0 auto;
     max-width: 1000px;
+    min-height: 100vh;
     //wygląd
     font-size: 2rem;
     background-color: white;
     box-shadow: 0 0 4px 0 #000;
+}
+
+.logo {
+    flex-basis: 200px;
+    // height: 160px;
+    background-color: cadetblue;
+}
+
+.search {
+    background-color: rgb(6, 38, 39);
+    flex-grow: 1;
+
+}
+
+.settings {
+    background-color: rgb(133, 55, 55);
+    padding: 0 50px;
+}
+
+.menu {
+    flex-basis: 100%;
+    background-color: darkblue;
+}
+
+.main-articles {
+    flex-basis: 100%;
+    // min-height: 50vh;
+    background-color: rgb(11, 19, 13);
+}
+
+.article-list {
+    flex-basis: 100%;
+    background-color: rgb(182, 131, 36);
+}
+
+.footer {
+    background-color: rgb(75, 67, 192);
+    flex-basis: 100%;
 }
