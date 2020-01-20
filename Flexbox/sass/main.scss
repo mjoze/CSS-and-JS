@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap&subset=latin-ext');
 
-$main-color: #8daae5;
+$main-color: #8a8681;
 $default-font: arial,
 sans-serif;
 $special-font: 'pt sans',
@@ -37,14 +37,49 @@ html {
 
 .logo {
     flex-basis: 200px;
-    // height: 160px;
-    background-color: cadetblue;
+
+    &__image {
+        // display: block;
+        width: 100%;
+    }
 }
 
 .search {
-    background-color: rgb(6, 38, 39);
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &__input {
+        flex-basis: 60%;
+        height: 20%;
+        margin-right: 2vh;
+        padding: 0 10px;
+        font-size: 1.4rem;
+
+        &:focus {
+            box-shadow: 0 0 2px 1px $main-color;
+            font-weight: bold;
+        }
+    }
+
+    &__btn {
+        height: 20%;
+        font-size: 1.4rem;
+        padding: 0 10px;
+        border: 2px solid black;
+        background-color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover {
+            background-color: black;
+            color: white;
+
+        }
+    }
 }
 
 .settings {
