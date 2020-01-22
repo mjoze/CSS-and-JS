@@ -1,1 +1,134 @@
-/* No CSS *//*# sourceMappingURL=style.min.css.map */
+body {
+  margin: 0;
+  font-family: arial;
+}
+
+* {
+  -webkit-box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+          box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+  margin-top: 20px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(120px, 200px) minmax(240px, 1fr) 80px;
+      grid-template-columns: minmax(120px, 200px) minmax(240px, 1fr) 80px;
+  -ms-grid-rows: auto 1fr auto auto;
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-areas: 'logotype search menu' 'gallery gallery gallery' 'contact contact contact' 'footer footer footer';
+  min-height: 100vh;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    -ms-grid-columns: minmax(300px, auto) 1fr;
+        grid-template-columns: minmax(300px, auto) 1fr;
+    -ms-grid-rows: auto auto auto 1fr auto auto;
+        grid-template-rows: auto auto auto 1fr auto auto;
+        grid-template-areas: 'logotype gallery' 'menu gallery' 'search gallery' '. gallery' 'contact gallery' 'footer footer';
+  }
+}
+
+.logo {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100px;
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logotype;
+  }
+}
+
+.search {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+@media (min-width: 1024px) {
+  .search {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: search;
+  }
+}
+
+.menu {
+  grid-column: -1/-2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: menu;
+  }
+}
+
+.gallery {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 120px 15px 15px;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: gallery;
+  }
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery h1 {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contact;
+  height: 60px;
+}
+
+.footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background-color: #ddd;
+}
+/*# sourceMappingURL=style.min.css.map */
