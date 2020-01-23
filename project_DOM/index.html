@@ -13,15 +13,16 @@
     <div class="form-container">
         <form class="form form--add">
             <h1 class="form__title">Add the element to DOM</h1>
-            <input type="text" class="form__input" placeholder="HTML element" required>
-            <input type="text" class="form__input" placeholder="Text in html element">
-            <input type="text" class="form__input" placeholder="Attribute">
-            <input type="text" class="form__input" placeholder="Property value">
+            <input type="text" class="form__input" name="node" placeholder="HTML element" required>
+            <input type="text" class="form__input" name="text" placeholder="Text in html element">
+            <input type="text" class="form__input" name="attr" placeholder="Attribute">
+            <input type="text" class="form__input" name="value" placeholder="Property value">
             <button class="form__button">Add the element</button>
         </form>
         <form class="form form--search">
             <h1 class="form__title">Search DOM</h1>
-            <input type="text" class="form__input" placeholder="Search for the item name" required>
+            <input type="text" class="form__input" name="searching-element" placeholder="Search for the item name"
+                required>
             <input type="submit" class="form__button" value="Find and show infromation">
         </form>
 

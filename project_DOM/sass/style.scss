@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+
 }
 
 .form-container {
@@ -64,7 +65,28 @@ body {
     margin: 0 auto;
 }
 
-.result {}
+.result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+
+    &__number-info {
+        grid-column: 1/4;
+        text-align: center;
+    }
+
+    &__element-description {
+        border: 2px solid #ddd;
+        padding: 10px;
+    }
+}
+
+.content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px 1px #ddd;
+}
 
 .footer {
     display: flex;
@@ -75,4 +97,9 @@ body {
     padding: 15px 0;
     font-size: 18px;
 
+}
+
+span {
+    color: red;
+    font-weight: bold;
 }
