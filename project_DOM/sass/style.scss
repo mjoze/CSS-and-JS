@@ -1,3 +1,78 @@
 body {
-    margin: 0
+    font-family: sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .form {
+
+        flex-basis: 40%;
+        margin: 20px 0;
+        padding: 10px 20px 25px;
+        background-color: #ddd;
+        box-shadow: 0 8px 6px -6px black;
+    }
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+
+    &__title {
+        flex-basis: 100%;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    &__input {
+        padding: 10px 20px;
+        font-size: 16px;
+        flex-basis: 40%;
+        margin: 10px 0;
+    }
+
+    &__button {
+        flex-basis: 60%;
+        margin: 30px 0;
+        padding: 10px 20px;
+        color: black;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+        border: 2px solid black;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+            transition: all 0.4s ease 0s;
+        }
+    }
+}
+
+.result .content .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.result {}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 18px;
+
 }
