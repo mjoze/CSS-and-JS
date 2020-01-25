@@ -2,8 +2,26 @@ class Scroller {
     constructor(rootSelector) {
         const rootElement = document.querySelector(rootSelector);
         this.sections = document.querySelectorAll('section');
-        this.currentSectionIndex = 0;
+        // const sectionsArr = Array.prototype.slice.call(this.sections);
+        const sectionsArr = [...this.sections]
+
+        this.currentSectionIndex = sectionsArr.findIndex(this.isScrolledIntoView);
+
+        this.currentSectionIndex = this.currentSectionIndex < 0 ? 0 : currentSectionIndex;
+        // this.currentSectionIndex = Math.max(this.currentSectionIndex, 0)
+
         this.isThrottled = false;
+        this.isScrolledIntoView(this.sections[0])
+    }
+
+    isScrolledIntoView(el) {
+        const rect = el.getBoundingClientRect();
+        const elemTop = rect.top;
+        const elemBottom = Math.floor(rect.bottom);
+
+        const isVissible = (elemTop >= 0) && (elemBottom <= window.innerHeight)
+
+
     }
 
     listenScroll = (event) => {
