@@ -7,3 +7,5 @@
 # JavaScript
 ### scroller project
 ### animation project
+### fetch project
+### DOM 
