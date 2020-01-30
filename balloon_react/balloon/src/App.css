@@ -32,7 +32,54 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.balloon-animation {
+  position: relative;
+}
+
+.flying-cloud {
+  position: absolute;
+  width: 20%;
+}
+
+.flying-balloon {
+  position: absolute;
+  width: 50%;
+  top: 20%;
+}
+
+.flying-cloud:nth-child(1) {
+  top: 30%;
+  left: 20%;
+}
+
+.flying-cloud:nth-child(2) {
+  left: 25%;
+}
+
+.flying-cloud:nth-child(3) {
+  top: 30%;
+  left: 40%;
+  z-index: 1;
+}
+
+.flying-cloud:nth-child(4) {
+  top: 50%;
+  left: 20%;
+}
+
+.flying-cloud:nth-child(5) {
+  top: 2%;
+  left: 70%;
+}
+
+.flying-cloud:nth-child(6) {
+  top: 40%;
+  left: 60%;
+  z-index: 1;
 }
