@@ -10,7 +10,7 @@ setTimeout(
         const text = 'done'
         console.log(text);
     }, 1000
-)
+);
 
 console.log('end');
 a();
