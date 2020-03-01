@@ -1,4 +1,4 @@
-import product from './product.js'
+import product from './product.js';
 
 export const showInConsole = (info) => {
     console.log(info);
