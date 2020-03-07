@@ -1,5 +1,9 @@
 @import "variable";
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     width: 100%;
     max-width: $max-width;
