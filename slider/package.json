@@ -1,11 +1,11 @@
 {
   "name": "sliding-img",
   "version": "1.0.0",
-  "author": "Jakub Król",
+  "author": "",
   "description": "Minimal webpack boilerplate with HMR and sass",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpggvilaca/webpack-boilerplate"
+    "url": ""
   },
   "main": "index.js",
   "scripts": {
