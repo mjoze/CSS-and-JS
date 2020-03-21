@@ -1,26 +1,38 @@
 class Warrior {
-    attacks = ['stroke', 'hit', 'cut', 'punch']
+    attacks = [
+        0.5,
+        0.8,
+        2,
+        0.2
+    ]
     constructor(name, power) {
         this.name = name;
         this.power = power;
 
     }
     showStatistics() {
-        console.log('Name: ' + this.name, 'Power: ' + this.power);
+        if (this.power < 0) {
+            console.log('dead');
+            this.power = 0;
 
+        } else {
+            console.log('Name: ' + this.name, 'Power: ' + this.power);
+        }
     }
     attack() {
-        const btn = document.querySelector('.btn');
-        btn.addEventListener('click', () => {
-            const attackPower = Math.floor(Math.random() * 100);
-            const attackChoice = Math.floor(Math.random() * this.attacks.length - 1) + 1;
-            // console.log(`${this.attacks[attackChoice]} o mocy ${attackPower}`);
-            return attackPower;
-        });
+        const attackPower = Math.floor(Math.random() * 100);
+        const attackChoice = Math.floor(Math.random() * this.attacks.length - 1) + 1;
+
+        return Math.round(attackPower * this.attacks[attackChoice]);
+
     }
-    hurt(attackPoints) {
+    offense(attackPoints) {
         this.power -= attackPoints;
+        console.log('damage ' + attackPoints);
+        this.showStatistics();
     }
 }
-const time = new Date
-console.log(time.getFullYear());
+
+const player = new Warrior('Bry', 100);
+const a = player.attack();
+player.offense(a)
