@@ -3,9 +3,10 @@ const playMusic = function (element, atrybut) {
     element.classList.add('playing');
     setTimeout(() => {
         element.classList.remove('playing')
-    }, 100);
+    }, 700);
 
     const audio = document.querySelector(`audio[data-key="${atrybut}"]`);
+    audio.currentTime = 0;
     audio.play();
 };
 
@@ -20,5 +21,6 @@ keys.forEach(key => {
 window.addEventListener('keydown', (e) => {
     const keyAtribute = e.keyCode;
     const div = document.querySelector(`div[data-key="${keyAtribute}"]`);
+    if (!div) return;
     playMusic(div, keyAtribute);
 });
