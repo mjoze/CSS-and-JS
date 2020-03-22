@@ -1,12 +1,12 @@
 class Warrior {
-    attacks = [
+    _attacks = [
         0.5,
         0.8,
         2,
         0.2
     ];
-    attackPower = Math.floor(Math.random() * 100);
-    attacksChoice = Math.floor(Math.random() * this.attacks.length - 1) + 1;
+    _attackPower = Math.floor(Math.random() * 100);
+    _attacksChoice = Math.floor(Math.random() * this._attacks.length - 1) + 1;
 
     constructor(name, power) {
         this.name = name;
@@ -23,7 +23,7 @@ class Warrior {
         }
     }
     attack() {
-        const damage = Math.round(this.attackPower * this.attacks[this.attacksChoice])
+        const damage = Math.round(this._attackPower * this._attacks[this._attacksChoice])
         return damage;
 
     }
@@ -34,8 +34,8 @@ class Warrior {
 }
 
 class WarriorWizard extends Warrior {
-    wizardry = [1, 0.8, 3, 2]
-    wizardryChoice = Math.floor(Math.random() * this.attacks.length - 1) + 1;
+    _wizardry = [1, 0.8, 3, 2]
+    _wizardryChoice = Math.floor(Math.random() * this._wizardry.length - 1) + 1;
     constructor(name, power, magic) {
         super(name, power);
         this.magic = magic;
@@ -48,7 +48,7 @@ class WarriorWizard extends Warrior {
 
     spell() {
         const magicAttack = super.attack();
-        const damage = Math.floor(magicAttack * this.wizardry[this.wizardryChoice]);
+        const damage = Math.floor(magicAttack * this._wizardry[this._wizardryChoice]);
         console.log(`I 'm casting a spell: ${damage}`);
         return damage;
     }
