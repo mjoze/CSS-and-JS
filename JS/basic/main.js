@@ -13,7 +13,7 @@ class Warrior {
         this.power = power;
 
     }
-    showBasicStatistics() {
+    showWarriorStatistics() {
         if (this.power < 0) {
             console.log('dead');
             this.power = 0;
@@ -23,7 +23,8 @@ class Warrior {
         }
     }
     attack() {
-        return Math.round(this.attackPower * this.attacks[this.attacksChoice]);
+        const damage = Math.round(this.attackPower * this.attacks[this.attacksChoice])
+        return damage;
 
     }
     offense(attackPoints) {
@@ -33,20 +34,26 @@ class Warrior {
 }
 
 class WarriorWizard extends Warrior {
-    wizardry = [0.8, 0.4, 0.6, 0.2]
+    wizardry = [1, 0.8, 3, 2]
     wizardryChoice = Math.floor(Math.random() * this.attacks.length - 1) + 1;
     constructor(name, power, magic) {
         super(name, power);
         this.magic = magic;
     }
 
-    spell() {
-        console.log(`I 'm casting a spell`);
-        return this.wizardry[this.wizardryChoice] * 100;
+    showWizardStatistics() {
+        super.showWarriorStatistics();
+        console.log(`Magic: ${this.magic}`);
+    }
 
+    spell() {
+        const magicAttack = super.attack();
+        const damage = Math.floor(magicAttack * this.wizardry[this.wizardryChoice]);
+        console.log(`I 'm casting a spell: ${damage}`);
+        return damage;
     }
 }
 
 
 const sorcerer = new WarriorWizard('Alpha', 85, 200);
-sorcerer.spell()
+sorcerer.showWizardStatistics()
