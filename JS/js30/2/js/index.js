@@ -12,7 +12,7 @@ const secondHand = document.querySelector('.second-hand');
 //     setInterval(() => {
 //         element.style.transform = `rotate(${90+time}deg)`
 //         if (time === 360) time === 0;
-//         time += 6
+//         time += time
 //     }, interval);
 // }
 // time(secondHand, seconds, 1000);
