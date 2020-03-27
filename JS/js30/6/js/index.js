@@ -14,13 +14,27 @@ function findMatches(wordToMatch, cities) {
 
         const regax = new RegExp(wordToMatch, 'gi');
         return place.city.match(regax) || place.state.match(regax);
-    })
+    });
 };
 
-function displayMatches() {
-    console.log(this.value);
-    console.log(findMatches(this.value, cities));
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
 
+function displayMatches() {
+    const matchArr = findMatches(this.value, cities);
+    const html = matchArr.map(place => {
+        const regax = RegExp(this.value, 'gi');
+        const cityName = place.city.replace(regax, `<span class="hl">${this.value}</span>`);
+        const stateName = place.state.replace(regax, `<span class="hl">${this.value}</span>`);
+        return `
+    <li>
+    <span class="name">${cityName}, ${stateName}</span>
+    <span class="population">${numberWithCommas(place.population)}</span>
+    </li>
+    `
+    }).join('');
+    searchSuggestions.innerHTML = html;
 }
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
