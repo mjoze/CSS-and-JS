@@ -1,5 +1,7 @@
 const path = require('path');
 // import path from 'path';
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = {
   mode: 'development',
@@ -17,5 +19,8 @@ module.exports = {
         use: "raw-loader",
       }
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
 }
