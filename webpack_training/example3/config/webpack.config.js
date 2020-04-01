@@ -13,6 +13,10 @@ module.exports = {
     filename: '[name]-[contenthash:6]-bundle.js',
     path: path.resolve(__dirname, '../', 'build')
   },
+  devServer: {
+    open: true,
+    contentBase: path.resolve(__dirname, '../', 'public')
+  },
   module: {
     rules: [
       {
