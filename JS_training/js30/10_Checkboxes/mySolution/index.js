@@ -1,7 +1,7 @@
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 let lastChecked;
 
-const firts = () => {
+const handleCheck = () => {
     const indexes = []
 
     checkboxes.forEach((checkbox, index) => {
@@ -21,5 +21,5 @@ const firts = () => {
 }
 
 checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', firts)
+    checkbox.addEventListener('change', handleCheck)
 })
